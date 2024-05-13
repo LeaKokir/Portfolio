@@ -1,0 +1,385 @@
+@charset "UTF-8";
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Poetsen One", sans-serif;
+  box-sizing: border-box;
+}
+
+/* HEADER */
+header {
+  font-family: "Prompt", sans-serif;
+  padding: 25px;
+  justify-content: space-between;
+  background-color: #800080;
+  color: #fff;
+  align-items: center;
+  display: flex;
+}
+header img {
+  width: 170px;
+  height: auto;
+}
+
+/* NAVIGATION MENU*/
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  display: flex;
+}
+nav ul li {
+  display: inline;
+  margin-right: 40px;
+  text-align: center;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+/* BUTTON FOR CV */
+.btn-cv {
+  font-weight: 500;
+  padding: 12px 20px;
+  background: #efefef;
+  border: 1px solid #800080;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.4s;
+  width: 15rem;
+}
+.btn-cv:hover {
+  background-color: #a3a3a3;
+  color: #fff;
+}
+
+/*GLOBAL ICON DESIGN*/
+.featured-text i {
+  font-size: 3rem;
+}
+
+/* MAIN SEKCIJA */
+.wrapper {
+  margin-left: 2rem;
+  margin-top: 5rem;
+  padding-inline: 10vw;
+  max-width: 100%;
+  position: relative;
+}
+
+.featured-box {
+  position: relative;
+  display: flex;
+  height: 70vh;
+  min-height: 500px;
+}
+
+.featured-text {
+  position: relative;
+  display: flex;
+  margin-top: 2rem;
+  justify-content: baseline;
+  align-content: center;
+  min-height: 80vh;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+.featured-text-card span {
+  background: #800080;
+  color: #fff;
+  padding: 3px 8px;
+  font-size: 2rem;
+  border-radius: 5px;
+}
+
+.featured-name {
+  font-size: 3rem;
+  font-weight: bold;
+  color: black;
+  margin-block: 20px;
+}
+
+.text1 {
+  text-transform: capitalize;
+  color: #800080;
+}
+
+.typedText {
+  font-family: "Dancing Script", cursive;
+  text-transform: capitalize;
+  color: #800080;
+  font-size: 2.5rem !important;
+}
+
+.featured-text-info {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: grey;
+}
+
+.featured-text-btn {
+  display: flex;
+  gap: 40px;
+}
+.featured-text-btn > .purple-btn {
+  background: rgba(128, 0, 128, 0.5);
+  color: #fff;
+  width: 10rem;
+}
+.featured-text-btn > .purple-btn:hover {
+  background: #800080;
+  color: #fff;
+}
+
+.featured-image {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  min-height: 70vh;
+  width: 50%;
+}
+
+.image {
+  margin-top: 3rem;
+  width: 380px;
+  height: 380px;
+  border-radius: 55% 45% 55% 45%;
+  overflow: hidden;
+  animation: imgFloat 6s ease-in-out infinite;
+}
+.image img {
+  width: 380px;
+  height: 380px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@keyframes imgFloat {
+  50% {
+    transform: translateY(10px);
+    border-radius: 45% 55% 45% 55%;
+  }
+}
+/* FOOTER */
+footer {
+  background-color: #800080;
+  font-family: "Prompt", sans-serif;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* SECTION ABOUT*/
+.about-text {
+  font-family: "Prompt", sans-serif;
+  max-width: 75%;
+}
+
+.about-content {
+  font-size: 2rem;
+  justify-content: center;
+  display: flex;
+  margin: 5px;
+}
+
+.about-text h3 {
+  margin-bottom: 10px;
+}
+.about-text p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+/*SECTION SKILLS WITH PNG ICONS*/
+#skills {
+  margin-bottom: 3rem;
+}
+
+.title-skills {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.skills-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.skills-img img {
+  width: 10rem;
+  height: auto;
+  margin: 50px;
+}
+.skills-img img:hover {
+  opacity: 0.5;
+}
+
+#projects h2 {
+  margin-bottom: 50px;
+}
+
+/* Stilizacija za kontakt sekciju */
+.section-contact {
+  font-family: Prompt;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 50px 20px;
+  height: 40vh;
+  font-size: 1.5rem;
+}
+
+.contact-text {
+  text-align: left;
+  font-size: 2rem;
+  padding-right: 15rem;
+  height: 10rem;
+  border-right: 2px solid #800080;
+  border-radius: 20px;
+}
+.contact-text:hover {
+  color: #800080;
+}
+
+.contact-options {
+  text-align: right;
+}
+.contact-options p {
+  margin-bottom: 10px;
+}
+.contact-options a {
+  color: #800080;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.icon {
+  margin: 0 10px;
+}
+.icon i {
+  font-size: 2rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+.icon i:hover {
+  color: #800080;
+}
+
+/* Projects section */
+.container-80 {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.line {
+  margin: 0 auto;
+  margin-top: 2rem;
+  border: none;
+  border-top: 6px solid #800080;
+  width: 80%;
+}
+
+/* MEDIA UPIT */
+@media only screen and (max-width: 1024px) {
+  .featured-box {
+    height: 100px;
+  }
+  .featured-text {
+    padding: 0;
+  }
+  .image {
+    width: 320px;
+    height: 320px;
+  }
+  .image img {
+    width: 320px;
+    height: 320px;
+  }
+}
+/* Dodajemo media upit za ekrane manje ili jednake 900 širine piksela  */
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav ul li {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+  .wrapper {
+    margin-left: 0rem;
+  }
+  .featured-box {
+    flex-direction: column;
+    justify-content: center;
+    height: 1000px;
+  }
+  .featured-text {
+    width: 100%;
+    order: 2;
+    justify-content: center;
+    align-content: flex-start;
+    min-height: 60vh;
+  }
+  .social-icons {
+    margin-top: 2em;
+  }
+  .featured-image {
+    order: 1;
+    justify-content: center;
+    min-height: 150px;
+    width: 100%;
+  }
+  .image {
+    width: 250px;
+    height: 250px;
+  }
+  .image img {
+    width: 250px;
+    height: 250px;
+  }
+  .skills-img img {
+    width: 4rem;
+  }
+  .contact-text {
+    text-align: left;
+    font-size: 1rem;
+    padding-right: 1rem;
+    border-right: 1px solid #800080;
+  }
+  .contact-options {
+    font-size: 1rem;
+  }
+}
+/* Dodajemo media upit za ekrane manje ili jednake 576 piksela širine */
+@media (max-width: 576px) {
+  .sections-wrapper {
+    flex-direction: column;
+  }
+  .about-image {
+    margin-bottom: 50px;
+  }
+}/*# sourceMappingURL=style.css.map */

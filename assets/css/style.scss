@@ -1,0 +1,437 @@
+$primarycolor: #800080;
+$secondarycolor: #fff;
+$sizeone: 3rem;
+
+$font-sizes: 1rem, 1.5rem, 2rem, 2.5rem, 3rem; //definisanje niza koji sadrzi velicine
+
+@each $size in $font-sizes {  // each petlja koja prolazi kroz niz
+  .font-size-#{$size} {     //kreiranje naziva klase
+    font-size: $size;   //definisanje css koji ce se izvrsiti za odredjeni element niza
+  }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: "Poetsen One", sans-serif; // Dodat font na celu stranicu
+    box-sizing: border-box;
+  }
+  /* HEADER */
+  header {
+    font-family: "Prompt", sans-serif;  //implementiran font
+    padding: 25px;
+    justify-content: space-between;
+    background-color: $primarycolor; // primenjene promenljive za boju
+    color: $secondarycolor;         // sto nam je omogucio SASS
+    align-items: center;
+    display: flex;
+  
+    img {
+      width: 170px;
+      height: auto;
+    }
+  }
+  /* NAVIGATION MENU*/
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: flex;
+  
+    li {
+      display: inline;
+      margin-right: 40px;
+      text-align: center;
+  
+      a {
+        color: $secondarycolor;
+        text-decoration: none;
+        font-size: 25px;
+      }
+    }
+  }
+  /* BUTTON FOR CV */
+  .btn-cv {
+    font-weight: 500;
+    padding: 12px 20px;
+    background: #efefef;
+    border: 1px solid $primarycolor;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s;
+    width: 15rem;
+  
+    &:hover {
+        background-color:darken(#efefef,30%);// funkcija za smanjivanje osvetljenja boje
+      color: $secondarycolor;
+    }
+  }
+  
+  /*GLOBAL ICON DESIGN*/
+  
+  .featured-text i {
+    font-size: $sizeone;
+  }
+  
+  /* MAIN SEKCIJA */
+  
+  .wrapper {
+    margin-left: 2rem;
+    margin-top: 5rem;
+    padding-inline: 10vw;
+    max-width: 100%;
+    position: relative;
+  }
+  
+  .featured-box {
+    position: relative;
+    display: flex;
+    height: 70vh;
+    min-height: 500px;
+  }
+  
+  .featured-text {
+    position: relative;
+    display: flex;
+    margin-top: 2rem;
+    justify-content: baseline;
+    align-content: center;
+    min-height: 80vh;
+    flex-direction: column;
+    padding-left: 20px;
+  }
+  
+  .featured-text-card span {
+    background: $primarycolor;
+    color: $secondarycolor;
+    padding: 3px 8px;
+    font-size: 2rem;
+    border-radius: 5px;
+  }
+  
+  .featured-name {
+    font-size: $sizeone;
+    font-weight: bold;
+    color: black;
+    margin-block: 20px;
+  }
+  .text1{
+    text-transform: capitalize;
+    color: $primarycolor;
+  }
+  .typedText {
+    font-family: "Dancing Script", cursive;
+    text-transform: capitalize;
+    color: $primarycolor;
+    font-size: 2.5rem!important;
+  }
+  
+  .featured-text-info {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: grey;
+  }
+  
+  .featured-text-btn {
+    display: flex;
+    gap: 40px;
+  
+    > .purple-btn {
+      background: rgba($primarycolor,0.5); //funkcija sass za providnost boje
+      color: $secondarycolor;
+      width: 10rem;
+  
+      &:hover {
+        background: $primarycolor;
+        color: $secondarycolor;
+      }
+    }
+  }
+  
+  .featured-image {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-height: 70vh;
+    width: 50%;
+  }
+  
+  .image {
+    margin-top: $sizeone;
+    width: 380px;
+    height: 380px;
+    border-radius: 55% 45% 55% 45%;
+    overflow: hidden;
+    animation: imgFloat 6s ease-in-out infinite;
+  
+    img {
+      width: 380px;
+      height: 380px;
+      object-fit: cover;
+    }
+  }
+  
+  @keyframes imgFloat {
+    50% {
+      transform: translateY(10px);
+      border-radius: 45% 55% 45% 55%;
+    }
+  }
+  /* FOOTER */
+
+  footer {
+    background-color: $primarycolor;
+    font-family: "Prompt", sans-serif;
+    color: $secondarycolor;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  /* SECTION ABOUT*/
+  .about-text {
+    font-family: "Prompt", sans-serif;
+    max-width: 75%;
+  }
+  
+  .about-content {
+    font-size: 2rem;
+    justify-content: center;
+    display: flex;
+    margin: 5px;
+  }
+  
+  .about-text {
+    h3 {
+      margin-bottom: 10px;
+   
+    }
+  
+    p {
+      line-height: 1.6;
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+      text-align: justify;
+    }
+  }
+  /*SECTION SKILLS WITH PNG ICONS*/
+  #skills {
+    margin-bottom: $sizeone;
+  }
+  
+  .title-skills {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .skills-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  
+    img {
+      width: 10rem;
+      height: auto;
+      margin: 50px;
+  
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+  
+  #projects h2 {
+    margin-bottom: 50px;
+  }
+  
+  /* Stilizacija za kontakt sekciju */
+  
+  .section-contact {
+    font-family: Prompt;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 50px 20px;
+    height: 40vh;
+    font-size: 1.5rem;
+  }
+  
+  .contact-text {
+    text-align: left;
+    font-size: 2rem;
+    padding-right: 15rem;
+    height: 10rem;
+    border-right: 2px solid $primarycolor;
+    border-radius: 20px;
+  
+    &:hover {
+      color: $primarycolor;
+    }
+  }
+  
+  .contact-options {
+    text-align: right;
+  
+    p {
+      margin-bottom: 10px;
+    }
+  
+    a {
+      color: $primarycolor;
+    }
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .icon {
+    margin: 0 10px;
+  
+    i {
+      font-size: 2rem;
+      color: #333;
+      transition: color 0.3s ease;
+  
+      &:hover {
+        color: $primarycolor;
+      }
+    }
+  }
+  
+  /* Projects section */
+  
+  .container-80 {
+    width: 80%;
+    margin: 0 auto;
+  
+    //Centriranjte sekciju na sredinu ekrana 
+  }
+  
+  .card-body {
+    text-align: center;
+  
+    // Centrirajte tekst unutar kartica 
+  }
+  
+  .line {
+    margin: 0 auto;
+    margin-top: 2rem;
+    border: none;
+    // Uklanjamo defaultni border
+    border-top: 6px solid $primarycolor;
+    width: 80%;
+  }
+  
+  /* MEDIA UPIT */
+  @media only screen and (max-width: 1024px) {
+    .featured-box {
+      height: 100px;
+    }
+  
+    .featured-text {
+      padding: 0;
+    }
+  
+    .image {
+      width: 320px;
+      height: 320px;
+  
+      img {
+        width: 320px;
+        height: 320px;
+      }
+    }
+  }
+  
+  /* Dodajemo media upit za ekrane manje ili jednake širine 900  piksela  */
+  @media (max-width: 900px) {
+    header {
+      flex-direction: column;
+      // Promеnjen smer fleksibilnog kontejnera na vertikalni
+      align-items: center;
+  
+    }
+  
+    nav ul {
+      flex-direction: column;
+      text-align: center;
+  
+      li {
+        margin-bottom: 10px;
+        margin-right: 0;
+      }
+    }
+  
+    .wrapper { 
+      margin-left: 0rem; //uklanjanje leve margine
+    }
+  
+    .featured-box {
+      flex-direction: column;   
+      justify-content: center;
+      height: 1000px;
+    }
+  
+    .featured-text {
+      width: 100%;
+      order: 2;
+      justify-content: center;
+      align-content: flex-start;
+      min-height: 60vh;
+    }
+  
+    .social-icons {
+      margin-top: 2em;
+    }
+  
+    .featured-image {
+      order: 1;
+      justify-content: center;
+      min-height: 150px;
+      width: 100%;
+    }
+  
+    .image {
+      width: 250px;
+      height: 250px;
+  
+      img {
+        width: 250px;
+        height: 250px;
+      }
+    }
+  
+    .skills-img img {
+      width: 4rem;
+    }
+  
+    .contact-text {
+      text-align: left;
+      font-size: 1rem;
+      padding-right: 1rem;
+      border-right: 1px solid $primarycolor;
+    }
+  
+    .contact-options {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Dodajemo media upit za ekrane manje ili jednake širine 576 piksela  */
+  @media (max-width: 576px) {
+    .sections-wrapper {
+      flex-direction: column;
+    }
+  
+    .about-image {
+      margin-bottom: 50px;
+    }
+  }
+  
